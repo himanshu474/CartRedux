@@ -10,7 +10,7 @@ export const getCategories=createAsyncThunk("category",async()=>{
     return data;
 })
 
-const productSlice=createSlice({
+const categorySlice=createSlice({
     name:"categories",
     initialState,
     reducers:{},
