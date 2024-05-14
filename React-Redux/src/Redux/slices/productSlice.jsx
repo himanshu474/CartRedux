@@ -8,13 +8,13 @@ const initialState={
     productDetailStatus:STATUS.IDLE,
 }
 
-export const getProducts=createAsyncThunk("getproducts",async()=>{
+export const getProduct=createAsyncThunk("getproducts",async()=>{
     const response=await fetch("https://fakestoreapi.com/products")
     const data=response.json();
     return data;
 })
 
-export const getCategoryProduct=createAsyncThunk(
+export const getcategoryProduct=createAsyncThunk(
     "getcategoryproduct",
     async(product)=>{
         const response=await fetch(
@@ -42,14 +42,14 @@ const productSlice=createSlice({
     reducers:{},
     extraReducers:(builder)=>{
         builder
-        .addCase(getProducts.pending,(state)=>{
+        .addCase(getProduct.pending,(state)=>{
             state.productStatus=STATUS.LOADING
         })
-        .addCase(getProducts.fulfilled,(state,action)=>{
+        .addCase(getProduct.fulfilled,(state,action)=>{
             state.productStatus=STATUS.SUCCESS
             state.products=action.payload
         })
-        .addCase(getProducts.rejected,(state)=>{
+        .addCase(getProduct.rejected,(state)=>{
             state.productStatus=STATUS.FAIL
         })
         .addCase(getDetailProduct.pending,(state,action)=>{
@@ -62,14 +62,14 @@ const productSlice=createSlice({
         .addCase(getDetailProduct.rejected,(state)=>{
             state.productDetailStatus=STATUS.FAIL
         })
-        .addCase(getCategoryProduct.pending,(state)=>{
+        .addCase(getcategoryProduct.pending,(state)=>{
             state.productStatus=STATUS.LOADING
         })
-        .addCase(getCategoryProduct.fulfilled,(state,action)=>{
+        .addCase(getcategoryProduct.fulfilled,(state,action)=>{
             state.productStatus=STATUS.LOADING
             state.products=action.payload
         })
-        .addCase(getCategoryProduct.rejected,(state)=>{
+        .addCase(getcategoryProduct.rejected,(state)=>{
             state.productStatus=STATUS.FAIL
         })
         },

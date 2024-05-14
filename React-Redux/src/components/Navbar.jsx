@@ -3,7 +3,7 @@ import { BiSearch } from 'react-icons/bi'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from 'react-icons/sl'
 import { useDispatch,useSelector } from 'react-redux'
-import { getCartTotal } from '../Redux/slices/cartSlice'
+import { getcartTotal } from '../Redux/slices/cartSlice'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -13,7 +13,7 @@ const dispatch=useDispatch();
 const{itemCount}=useSelector((state)=>state.carts)
 
 useEffect(()=>{
-dispatch(getCartTotal());
+dispatch(getcartTotal());
 },[dispatch])
 
   return (
