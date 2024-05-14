@@ -13,7 +13,7 @@ const[itemsOffset,setItemOffset]=useState(0)
 const itemsPerPage=6;
 const endOffset=itemsOffset + itemsPerPage;
 const currentItems=products.slice(itemsOffset,endOffset)
-const pageCount =Math.cell(products.length/itemsPerPage)
+const pageCount =Math.ceil(products.length/itemsPerPage)
 
 const handlePageClick=(e)=>{
     const  newOffset=(e.selected * itemsOffset.itemsPerPage) % products.length;
