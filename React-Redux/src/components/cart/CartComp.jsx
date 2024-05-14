@@ -2,7 +2,7 @@ import React from 'react'
 import { removeFromCart } from '../../Redux/slices/cartSlice'
 import { useDispatch } from 'react-redux'
 
-const cart = ({cart}) => {
+const CartComp = ({cart}) => {
   const dispatch=useDispatch()
   return (
     <div className='flex items-center justify-between'>
@@ -25,4 +25,4 @@ const cart = ({cart}) => {
   )
 }
 
-export default cart
+export default CartComp
