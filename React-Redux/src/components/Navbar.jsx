@@ -19,10 +19,10 @@ dispatch(getcartTotal());
   return (
     //Main Navbar
     <div className='flex justify-between items-center my-2 py-2'>
-        //left Navbar
+        {/* //left Navbar */}
         <div className='text-6xl mx-12 cursor-pointer'
         onClick={()=>navigate("/")}>Shopsy</div>
-        //right Navbar
+        {/* //right Navbar */}
         <div className='flex items-center gap-8 mx-12'>
             <div className='flex items-center border p-3 rounded-full bg-gray-100'>
                 <input

@@ -9,7 +9,7 @@ const navigate=useNavigate()
     className='w-[407px] p-5 m-2 border rounded-[8%] relative h-[380px]'>
        <div className='text-2xl font-bold absolute rounded-full top-2 right-1.5 bg-black text-white'>
         {" "}
-        {product?.price}<span className='text-sm'>TL</span>
+        {product?.price}<span className='text-sm'>Rs</span>
         </div> 
         <img
         className='w-[250px] h-[250px] object-contain m-auto'

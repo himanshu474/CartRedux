@@ -13,7 +13,7 @@ const CartComp = ({cart}) => {
         <div className='w-[476px]'>
             <div className="text-xl font-bold">{cart?.title}</div>
         </div>
-        <div className="text-xl font-2xl">{cart?.price} TL</div>
+        <div className="text-xl font-2xl">{cart?.price} Rs</div>
         <div className="text-xl font-xl">{cart?.quantity}</div>
         <div onClick={()=>dispatch(removeFromCart(cart?.id))}
         className='cursor-pointer bg-red-500 roundec-xl text-white w-[100px] h-4
