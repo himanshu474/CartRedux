@@ -8,7 +8,7 @@ const Sorting = ({setSort}) => {
                 Choose
             </option>
             <option value="inc" >
-                incrementing
+                increasing
             </option>
             <option value="dec">
                 decreasing
