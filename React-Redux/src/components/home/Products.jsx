@@ -21,8 +21,11 @@ const handlePageClick=(e)=>{
 }
 
 useEffect(()=>{
-    if(category) dispatch(getcategoryProduct(category))
-        else dispatch(getProduct())
+    if(category){
+        dispatch(getcategoryProduct(category))
+    } 
+      else
+       {dispatch(getProduct())}
 },[dispatch,category])
 
   return (
