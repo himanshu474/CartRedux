@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../Redux/slices/cartSlice";
 
@@ -6,18 +7,12 @@ const DetailComp = ({ productDetail }) => {
   const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState(0);
-
   const decrement = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
-    }
+    if (quantity > 0) setQuantity(quantity - 1);
   };
   const increment = () => {
-    if (quantity < productDetail?.rating.count) {
-      setQuantity(quantity + 1);
-    }
+    if (quantity < productDetail?.rating.count) setQuantity(quantity + 1);
   };
-
   const addBasket = () => {
     dispatch(
       addToCart({
@@ -37,15 +32,14 @@ const DetailComp = ({ productDetail }) => {
         src={productDetail?.image}
       />
       <div className="flex flex-col gap-4 my-auto mx-3">
-        <div className="text-4xl font-bold ">{productDetail?.title}</div>
+        <div className="text-4xl font-bold">{productDetail?.title}</div>
         <div className="my-2">{productDetail?.description}</div>
-        <div className="text-red-500 text-lg">
-          {/* Rating : {productDetail?.rating.rate}  */}
+        {/* <div className="text-red-500 text-lg">
+          Rating : {productDetail?.rating}
         </div>
-        {/* <div>Count : {productDetail?.rating.count}</div> */}
+        <div>Count : {productDetail?.rating.count}</div> */}
         <div className="text-4xl font-extrabold text-green-600">
-          {productDetail?.price}
-          <span className="text-sm">Rs</span>
+          {productDetail?.price} <span className="text-sm">Rs</span>
         </div>
         <div className="flex items-center gap-5">
           <div onClick={decrement} className="text-4xl cursor-pointer">
@@ -63,12 +57,12 @@ const DetailComp = ({ productDetail }) => {
           </div>
         </div>
         <div
-          className="border w-[150px] text-xl rounded-lg
-            my-2 bg-gray-50 cursor-pointer h-16 flex items-center
-            justify-center text-black font-bold"
-          onclick={addBasket}
+          className="border w-[150px] text-xl rounded-lg my-2
+        bg-red-500 cursor-pointer
+        h-16 flex items-center justify-center text-black font-bold"
+          onClick={addBasket}
         >
-          Add To Basket
+      Add to Basket
         </div>
       </div>
     </div>
