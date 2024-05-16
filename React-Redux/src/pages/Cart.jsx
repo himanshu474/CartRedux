@@ -21,7 +21,7 @@ useEffect(()=>{
                     <CartComp key={i} cart={cart}/>
                 ))}
                 <div className='flex justify-end text-xl font-bold'>
-                    TOTAL AMOUNT: <span className='text-green-600 text-2xl ml-2'>{totalAmount}TL</span>     
+                    TOTAL AMOUNT: <span className='text-green-600 text-2xl ml-2'>{totalAmount}Rs</span>     
                 </div>
             </div>
         ):(
