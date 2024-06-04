@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, ADD_QUANTITY, FILTERBYCATEGORY, REMOVE_QUANTITY } from "./actionTypes";
+import { ADD_PRODUCT, ADD_QUANTITY,  REMOVE_QUANTITY } from "./actionTypes";
 
 export const addProduct = (product) => {
   return {
