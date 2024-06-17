@@ -22,7 +22,7 @@ const Navbar = () => {
           href="/"
             className="btn btn-ghost text-xl" 
           >
-            ShopingCart
+            ShoppingCart
           </a>
         </div>
 
