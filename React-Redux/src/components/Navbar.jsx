@@ -8,6 +8,8 @@ const Navbar = () => {
     });
   };
 
+  
+
   const cartItemNo = carts.reduce(
     (total, product) => total + product.quantity,
     0
