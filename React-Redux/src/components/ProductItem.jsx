@@ -4,6 +4,7 @@ import CartItem from "./CartItem";
 import Billing from "./Billing";
 
 const MyCart = () => {
+  
   const carts = useSelector((state) => state.carts);
   return (
     <main className="py-12 max-w-7xl container mx-auto px-4">
